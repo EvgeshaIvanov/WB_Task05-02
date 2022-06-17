@@ -1,11 +1,11 @@
 package com.example.superheroeswiki.network
 
-import com.example.superheroeswiki.model.HeroResults
+import com.example.superheroeswiki.model.HeroData
 import retrofit2.Response
 import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("search/_")
-    suspend fun getHeroesList(): Response<HeroResults>
+    @GET("all.json")
+    suspend fun getHeroesList(): Response<List<HeroData>>
 }

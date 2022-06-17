@@ -5,7 +5,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class HeroImage(
-    @SerializedName("url")
+    @SerializedName("sm")
     val url: String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(parcel.readString()!!)

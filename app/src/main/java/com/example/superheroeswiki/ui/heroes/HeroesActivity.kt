@@ -43,9 +43,7 @@ class HeroesActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
         viewModel.getAllHeroes()
         viewModel.heroesList.observe(this) { response ->
-            if (response.isSuccessful) {
-                heroesAdapter.list = response.body()!!.results
-            }
+            heroesAdapter.list = response
         }
     }
 
